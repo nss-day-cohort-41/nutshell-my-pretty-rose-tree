@@ -1,0 +1,22 @@
+.loginContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin: -1em 28em 15em 15em;
+}
+
+.banner {
+    background-color: #739FC7;
+    padding-left: 4.5em;
+    margin-top: -7.75em;
+    
+}
+
+.bannerLogo{
+    display: flex;
+    background-color: #739FC7;
+    justify-content: flex-end;
+    padding-right: 12em; 
+    padding-top: 1.25em;
+}
+
+
