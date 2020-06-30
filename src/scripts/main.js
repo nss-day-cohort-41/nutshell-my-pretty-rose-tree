@@ -1,9 +1,9 @@
-import taskName from "./Task.js"
+// import taskName from "./Task.js"
 
 // Import modules
 import loginRegisterListeners from '././login_registration/loginListeners.js'
 import API from '././login_registration/loginAPICall.js'
-taskName();
+// taskName();
 //// Registration and Login Components ////
 
 // Invoking method to get all users from the API 

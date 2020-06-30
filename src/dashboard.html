@@ -4,18 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutshell Dashboard</title>
-    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-<<<<<<< HEAD:dashboard.html
-    <div id="task"></div>
-=======
+    <div class="bannerDashboard">
+        <div class="bannerDashboard__logo">
+            <img src="../d840c4cc-a59e-4608-8917-ac411f453f48_200x200.png" alt="logo" style="width: 50px; height: 50px;"> 
+        </div>
 
-    <h1>Hello</h1>
+        <div class="bannerDashboard__title">Nutshell</div>
+    </div>
+    <div class="logoutBanner"></div>
+    <div id="messageFriendContainer">
+        <div id="messageContainer">
+            <div id="newMessage">
+                <div class="card bg-transparent">
+                    <div class="card-header" id="cardHeader">
+                      Messages
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Create New Message</h5>
+                      <p class="card-text">Today was good.</p>
+                      <a href="#" class="btn btn-secondary">Submit</a>
+                    </div>
+                  </div>
+            </div>
+            <div id="displayAllMessages"></div>
+        </div>
+        <div id="friendsContainer">
+            <div id="newFriends">
+                <div class="card bg-transparent">
+                    <div class="card-header" id="cardHeader">
+                     Friends
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Add New Friend</h5>
+                      <p class="card-text">Today was good.</p>
+                      <a href="#" class="btn btn-secondary">Add Friend</a>
+                    </div>
+                  </div>
+            </div>
+            <div id="displayAllFriends"></div>
+        </div>
+    </div>
+    <div id="taskContainer">
+    <div id="newTask">
+        <div class="card bg-transparent">
+            <div class="card-header" id="cardHeader">
+              Task
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Create New Task</h5>
+              <p class="card-text">Today was good.</p>
+              <a href="#" class="btn btn-secondary">Submit</a>
+            </div>
+          </div>
+    </div>
+    <div id="displayAllTask"></div>
+    </div>
    
->>>>>>> master:src/dashboard.html
+        <div id="eventContainer">
+            <div id="newEvent">
+                <div class="card bg-transparent">
+                    <div class="card-header" id="cardHeader">
+                      Event
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Create New Event</h5>
+                      <p class="card-text">Today was good.</p>
+                      <a href="#" class="btn btn-secondary">Submit</a>
+                    </div>
+                  </div>
+            </div>
+            <div id="displayAllEvents"></div>
+        </div>
+        <div id="newsContainer">
+            <div id="newNews">
+                <div class="card bg-transparent">
+                    <div class="card-header" id="cardHeader">
+                      News
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Add New Article</h5>
+                      <p class="card-text">Today was good.</p>
+                      <a href="#" class="btn btn-secondary">Submit</a>
+                    </div>
+                  </div>
+            </div>
+            <div id="displayAllNews"></div>
+      
+    
+
+
+
+
+   
     <script type= "module" src="./scripts/main.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
