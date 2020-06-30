@@ -1,18 +1,19 @@
 const taskName = {
 taskForm: () => {
+    // posting to the dom
     document.querySelector(".taskForm").innerHTML = `
     <form>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Task</label>
-      <input type="task" class="form-control" id="task" aria-describedby="" placeholder="enter task">
-      <small id="task"
-    </div>
-    <div class="form-group">
-      <label for="taskDate">Date to be complete</label>
-      <input type="taskDate" class="form-control" id="taskDate" placeholder="enter date">
-    </div>
-
-    <button type="taskSubmit" class="btn btn-dark">Submit</button>
+        <input type="hidden" id="task" value="">
+        <div class="form-group">
+        <label for="task">Task</label>
+        <input type="text" class="form-control" id="taskEntry" placeholder="enter task">
+        <small id="task"
+        </div>
+        <div class="form-group">
+        <label for="taskDate">Completion Date</label>
+        <input type="date" class="form-control" id="taskDate" placeholder="enter date">
+        </div>
+        <button type="submit" id="taskSubmit" class="btn btn-secondary">Submit</button>
   </form>`
 }
 }
