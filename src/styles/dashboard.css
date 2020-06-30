@@ -1,4 +1,4 @@
-
+/* this is the banner color and logo position */
 .bannerDashboard {   
      background-color:  #739FC7; 
     display: flex;    
@@ -15,7 +15,7 @@
 
 
 
-
+ /*this is the color for the boxes  */
 
 #cardHeader {
  background-color: #739FC7;
