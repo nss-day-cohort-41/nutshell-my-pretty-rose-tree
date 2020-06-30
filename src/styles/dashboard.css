@@ -1,0 +1,42 @@
+/* this is the banner color and logo position */
+.bannerDashboard {   
+     background-color:  #739FC7; 
+    display: flex;    
+    flex-direction: row;    
+    margin-bottom: 1rem;
+    }
+.bannerDashboard__title {    
+    display: flex;    
+    flex-direction: row;   
+    align-items: center;    
+    font-size: 48px;
+    padding-left: 1em;
+}
+
+
+
+ /*this is the color for the boxes  */
+
+#cardHeader {
+ background-color: #739FC7;
+}
+
+#messageContainer{
+    background-color: cornsilk;
+}
+
+#friendsContainer{
+    background-color: cornsilk;
+}
+
+#taskContainer{
+    background-color: cornsilk;
+}
+
+#eventContainer{
+    background-color: cornsilk;
+}
+#newsContainer{
+    background-color: cornsilk;
+}
+
