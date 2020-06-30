@@ -1,7 +1,8 @@
-const createTaskEntry = (task, date) => {
+const createTaskEntry = (task, date, userId) => {
     const newTaskEntry = {
-        task: taskEntry,
-        date: taskDate
+        task: task,
+        date: date,
+        userId: userId
     }
     return newTaskEntry
 }

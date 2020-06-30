@@ -13,7 +13,7 @@ taskForm: () => {
         <label for="taskDate">Completion Date</label>
         <input type="date" class="form-control" id="taskDate" placeholder="enter date">
         </div>
-        <button type="submit" id="taskSubmit" class="btn btn-secondary">Submit</button>
+        <button type="button" id="taskSubmit" class="btn btn-secondary">Submit</button>
   </form>`
 }
 }
