@@ -5,11 +5,11 @@ const makeTaskComponent = (taskList) => {
       Task: ${taskList.tasks}<br>
       Compeletion Date: ${taskList.date}<br>
      UserID: ${taskList.userId}
-    <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="taskCheck">
-    <label class="form-check-label" for="checkTask">check when Complete</label>
+    <div>
+    <input type="checkbox"  id="checkTask">
+    <label  for="checkTask">check when Complete</label>
     </div>
-    <button id="deleteTask--${task.id}">Remove</button>
+    <button id="deleteTask--${taskList.id}">Remove</button>
   </div>`
   return taskHTMLRepresentation
 }

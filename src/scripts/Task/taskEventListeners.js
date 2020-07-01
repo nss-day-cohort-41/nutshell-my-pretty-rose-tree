@@ -36,15 +36,19 @@ document.getElementById("taskSubmit").addEventListener("click", event => {
 }
 
 // delete button
+
 document.querySelector(".taskLog").addEventListener("click", event => {
+  event.preventDefault()
   if(event.target.id.startsWith("deleteTask--")){
-    const taskToDelete = event.target.id.split("--")[1];
-    console.log("taskToDelete")
+    const taskToDelete = event.target.id.split("--")[1]
+    console.log("taskToDelete", taskToDelete)
     API.deleteTask(taskToDelete)
-  
     .then((response) => {
-      return renderTasks(response)
+     API.getTasks().then((response) => {
+       renderTasks(response)
   })
+  })
+  
 }
 
 })
