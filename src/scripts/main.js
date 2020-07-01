@@ -1,5 +1,3 @@
-
-
 // Import modules
 import loginRegisterListeners from '././login_registration/loginListeners.js'
 import API from '././login_registration/loginAPICall.js'
