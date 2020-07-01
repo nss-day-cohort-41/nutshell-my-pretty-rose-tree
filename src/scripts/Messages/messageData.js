@@ -11,14 +11,14 @@ const messagesAPI = {
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(messageObject)
       });
-      const messageData = await response.json();
+      const messageData = await response.json().then(() => messageHTMLCalls.renderMessageHTML(this.listOfMessages)) ;
       return messageData
     },
     // Method GETS all message objects from API
     async getAllMessages() {
-      const response = await fetch('http://localhost:8088/messages')
+      const response = await fetch('http://localhost:8088/messages?_expand=user')
       const arrayOfMessageObjects = await response.json()
-      this.listOfUsers = arrayOfMessageObjects
+      this.listOfMessages = arrayOfMessageObjects
       return arrayOfMessageObjects
     },
     // Method GETS single message object from API
@@ -38,14 +38,11 @@ const messagesAPI = {
         const updatedMessageData = await response.json()
         return updatedMessageData
     },
-    async deleteMessage(id) {
-      const response = await fetch(`http://localhost:8088/messages/${id}`, {
+    deleteMessage: (id) => {
+      return fetch(`http://localhost:8088/messages/${id}`, {
         method: "DELETE"
-      })
-      const deleteMessageData = await response.json()
-      return deleteMessageData
+      }).then(response => response.json())
     }
-    
   }
   
   // Export modules

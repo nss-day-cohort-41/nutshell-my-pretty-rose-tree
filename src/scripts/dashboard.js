@@ -5,7 +5,5 @@ taskName.taskForm();
 
 
 messageListeners.displayListener()
-messageListeners.showMessages()
-messageListeners.SubmitNewMessage()
 createMessageObject()
 
