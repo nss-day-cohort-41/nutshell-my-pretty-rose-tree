@@ -2,10 +2,35 @@ import taskName from "./Task/Tasks.js"
 import eventListener from "./Task/taskEventListeners.js"
 import renderTasks from "./Task/taskList.js";
 import API from "./Task/taskapi.js"
+import messageListeners from "./Messages/messageEventListeners.js"
+import createMessageObject from "./Messages/createNewMessagesObject.js"
 import eventsHTML from './Event/eventsHtmlComponent.js'
 import eventsListeners from './Event/eventsListeners.js'
 import eventsAPI from './Event/eventsAPIcalls.js'
 import eventsDisplay from './Event/eventsDisplay.js'
+
+
+messageListeners.displayListener()
+createMessageObject()
+
+ const logout = {
+ 
+ redirectToLogin() {
+    window.location.replace("http://localhost:5000/src/");
+  },
+  logoutUser() {
+    sessionStorage.removeItem('activeUser')
+    this.redirectToLogin()
+  },
+  logoutListener() {
+    document.getElementById('logoutButton').addEventListener("click", event => {
+      this.logoutUser()
+    })
+}
+ }
+
+ logout.logoutListener()
+
 
 // Invoking method to "create an event" button in DOM
 eventsHTML.newEventButton();

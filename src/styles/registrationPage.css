@@ -11,12 +11,14 @@
     
 }
 
-.bannerLogo{
+.bannerLogo {
     display: flex;
     background-color: #739FC7;
     justify-content: flex-end;
     padding-right: 12em; 
     padding-top: 1.25em;
 }
-
+.fontColor {
+    color: red;
+}
 
