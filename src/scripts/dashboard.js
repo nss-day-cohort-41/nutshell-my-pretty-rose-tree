@@ -10,5 +10,8 @@ taskName.taskForm();
 eventsHTML.newEventButton();
 // Invoking method displaying event form in DOM and saving new event object in API
 eventsListeners.displayFormListener();
-// Invoking method to get all events and display events in DOM
-eventsAPI.getAllEvents().then(() => eventsDisplay.displayEventsList(eventsAPI.allEvents))
+// Invoking method to get all events pertaining to active user and display events in DOM
+const activeUserId = sessionStorage.getItem('activeUser')
+eventsAPI.getAllActiveUserEvents(activeUserId).then(() => eventsDisplay.displayEventsList(eventsAPI.allEvents))
+// Invoking method to delete event when delete button is clicked
+eventsListeners.deleteSelectedEvent();

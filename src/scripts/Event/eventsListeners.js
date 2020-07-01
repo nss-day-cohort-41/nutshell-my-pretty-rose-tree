@@ -1,6 +1,7 @@
 import eventsHTML from "./eventsHtmlComponent.js";
 import createNewEventObj from "./createEventObj.js";
 import eventsAPI from "./eventsAPIcalls.js";
+import eventsDisplay from "./eventsDisplay.js";
 
 const eventsListeners = {
   // Method displaying new event form when "create an event" button is clicked
@@ -35,7 +36,27 @@ const eventsListeners = {
 
         // POST new event object to API then display new event in display event list
         eventsAPI.saveEvent(newEventObj)
-        .then(() => document.getElementById('eventFormEntry').reset())
+        .then(() => eventsAPI.getAllActiveUserEvents(activeUserId))
+        .then(response => {
+          eventsDisplay.displayEventsList(response)
+          document.getElementById('eventFormEntry').reset()
+        })
+      }
+    })
+  },
+  // Method deletes event selected
+  deleteSelectedEvent() {
+    const eventListElement = document.getElementById('eventList')
+    const activeUserId = sessionStorage.getItem('activeUser')
+
+    eventListElement.addEventListener('click', event => {
+
+      if (event.target.id.startsWith('deleteEvent--')) {
+        const eventToBeDeletedId = event.target.id.split('--')[1]
+        
+        eventsAPI.deleteEvent(eventToBeDeletedId)
+        .then(() => eventsAPI.getAllActiveUserEvents(activeUserId))
+        .then(response => eventsDisplay.displayEventsList(response))
       }
     })
   }

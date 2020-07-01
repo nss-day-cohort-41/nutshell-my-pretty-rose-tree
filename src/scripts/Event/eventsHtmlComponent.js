@@ -30,7 +30,7 @@ const eventsHTML = {
             <label for="newEventAddress">Event Address</label>
             <input type="text" class="form-control" id="newEventAddress" placeholder="Ex. 1234 Main St, New York, NY 10005">
           </div>
-          <button type="submit" class="btn btn-primary" id="submitNewEvent">Submit Event</button>
+          <button type="submit" class="btn btn-secondary" id="submitNewEvent">Submit Event</button>
         </form>
       </div>
     `
@@ -45,7 +45,7 @@ const eventsHTML = {
           <h5 class="card-title" id="eventName">${eventObj.name}</h5>
           <p class="card-text" id="eventDate">${eventObj.date}</p>
           <p class="card-text" id="eventLocation">${eventObj.location}</p>
-          <button type="button" class="btn btn-primary" id="deleteEvent--${eventObj.id}">Delete Event</button>
+          <button type="button" class="btn btn-secondary" id="deleteEvent--${eventObj.id}">Delete Event</button>
         </div>
       </div>
     `

@@ -2,7 +2,7 @@ const createNewEventObj = (userId, name, date, location) => {
   return {
     userId: parseFloat(userId),
     name,
-    date,
+    date: new Date(date.split('-')).toLocaleDateString(),
     location
   }
 }
