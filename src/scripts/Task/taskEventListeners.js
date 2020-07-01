@@ -30,20 +30,23 @@ document.getElementById("taskSubmit").addEventListener("click", event => {
          // resetting the task input
          document.getElementById("newTask").reset()
     }
-    // stops the page from refreashing everytime you submit
+    // this stops the page from refreashing everytime you click submit
     event.preventDefault()
 })
 }
 
 // delete button
-
 document.querySelector(".taskLog").addEventListener("click", event => {
+  // this stops the page from refreashing everytime you click delete
   event.preventDefault()
+  // this is targeting the delete buttom from taskToDom
   if(event.target.id.startsWith("deleteTask--")){
+     //  this look at this id and divide left and right  delete task and the second is the id number
     const taskToDelete = event.target.id.split("--")[1]
-    console.log("taskToDelete", taskToDelete)
+  //  this is getting the info from the api delete task
     API.deleteTask(taskToDelete)
     .then((response) => {
+      // this is getting all task and rendering the task to the dom
      API.getTasks().then((response) => {
        renderTasks(response)
   })

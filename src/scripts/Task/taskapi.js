@@ -1,3 +1,4 @@
+// this holds all the tasks
 let  allTasks = [] 
 const API = {
    allTasks: () => {

@@ -8,6 +8,7 @@ const renderTasks = (tasks) => {
     taskArticleElement.innerHTML = ""
     // this is pulling from taskToDom
     const taskArray =  API.allTasks()
+    // this is itesrating through taskArray
     for(const taskObject of taskArray ){
         const taskHTML = makeTaskComponent(taskObject)
         // this makes sure it prints to the dom
