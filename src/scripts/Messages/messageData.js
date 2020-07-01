@@ -1,3 +1,5 @@
+import messageHTMLCalls from "./messagesRenderHTML.js"
+
 // Object houses methods corresponding to getting/posting message data in/from API database
 const messagesAPI = {
     // Array storing all message objects upon invoking getAllMessages method
@@ -35,7 +37,15 @@ const messagesAPI = {
         });
         const updatedMessageData = await response.json()
         return updatedMessageData
+    },
+    async deleteMessage(id) {
+      const response = await fetch(`http://localhost:8088/messages/${id}`, {
+        method: "DELETE"
+      })
+      const deleteMessageData = await response.json()
+      return deleteMessageData
     }
+    
   }
   
   // Export modules
