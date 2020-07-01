@@ -1,5 +1,6 @@
 import createTaskEntry from "./createTask.js"
 import API from "./taskapi.js"
+import renderTasks from "./taskList.js"
 
 // this is the submit eventListener
 const submitListener = () => {
@@ -21,8 +22,10 @@ document.getElementById("taskSubmit").addEventListener("click", event => {
         
         // posting to Json-server
         API.submitTask(newTaskObject).then(() => {
-            return API.getTasks
+            return API.getTasks()
          
+        }).then((response) => {
+           return renderTasks(response)
         })
          // resetting the task input
          document.getElementById("newTask").reset()
@@ -31,4 +34,5 @@ document.getElementById("taskSubmit").addEventListener("click", event => {
     event.preventDefault()
 })
 }
+
 export default submitListener
