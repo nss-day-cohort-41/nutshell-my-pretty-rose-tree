@@ -1,7 +1,7 @@
 // factory function for Task
-const createTaskEntry = (task, date, userId) => {
+const createTaskEntry = (tasks, date, userId) => {
     const newTaskEntry = {
-        task: task,
+        tasks: tasks,
         date: date,
         userId: userId
     }
