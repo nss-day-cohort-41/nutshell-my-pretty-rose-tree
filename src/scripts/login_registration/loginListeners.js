@@ -87,6 +87,5 @@ const loginRegisterListeners = {
     window.location.replace("http://localhost:5000/src/dashboard");
   }
 }
-
 // Export modules
 export default loginRegisterListeners;
