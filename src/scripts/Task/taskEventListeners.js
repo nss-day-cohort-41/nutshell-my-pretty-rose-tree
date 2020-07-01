@@ -3,7 +3,7 @@ import API from "./taskapi.js"
 import renderTasks from "./taskList.js"
 
 // this is the submit eventListener
-const submitListener = () => {
+const eventListener = () => {
 document.getElementById("taskSubmit").addEventListener("click", event => {
    
     // hidden input
@@ -35,4 +35,13 @@ document.getElementById("taskSubmit").addEventListener("click", event => {
 })
 }
 
-export default submitListener
+// delete button
+document.querySelector(".taskLog").addEventListener("click", event => {
+  if(event.target.id.startsWith("deleteTask--")){
+    const taskDelete = event.target.id.split("--")[1];
+    API.deleteTask(taskToDelete)
+    .then(() => API.getTasks())
+  }
+})
+
+export default eventListener

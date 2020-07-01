@@ -9,7 +9,7 @@ const makeTaskComponent = (taskList) => {
     <input type="checkbox" class="form-check-input" id="taskCheck">
     <label class="form-check-label" for="checkTask">check when Complete</label>
     </div>
-    <button id="deleteEntry--${task.id}">Remove</button>
+    <button id="deleteTask--${task.id}">Remove</button>
   </div>`
   return taskHTMLRepresentation
 }

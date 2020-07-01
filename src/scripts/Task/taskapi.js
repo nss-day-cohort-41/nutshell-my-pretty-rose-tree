@@ -13,6 +13,14 @@ submitTask: (newTaskObject) => {
         },
         body: JSON.stringify(newTaskObject)
     })
+},
+
+// deleting task
+deleteTask: (id) => {
+    return fetch(`"http://localhost:8088/tasks/${id}`, {
+        method: "Delete",
+    })
+    .then(response => response.json())
 }
 }
 
