@@ -36,6 +36,21 @@ const eventsHTML = {
     `
 
     eventContainer.innerHTML += eventForm
+  },
+  // Method converts event data to HTML representation
+  eventHtmlRepresentation(eventObj) {
+    const eventHtmlRep = `
+      <div class="card w-50" id="event--${eventObj.id}">
+        <div class="card-body">
+          <h5 class="card-title" id="eventName">${eventObj.name}</h5>
+          <p class="card-text" id="eventDate">${eventObj.date}</p>
+          <p class="card-text" id="eventLocation">${eventObj.location}</p>
+          <button type="button" class="btn btn-primary" id="deleteEvent--${eventObj.id}">Delete Event</button>
+        </div>
+      </div>
+    `
+
+    return eventHtmlRep
   }
 }
 
