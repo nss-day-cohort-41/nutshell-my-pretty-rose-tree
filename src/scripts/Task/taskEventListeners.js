@@ -38,10 +38,15 @@ document.getElementById("taskSubmit").addEventListener("click", event => {
 // delete button
 document.querySelector(".taskLog").addEventListener("click", event => {
   if(event.target.id.startsWith("deleteTask--")){
-    const taskDelete = event.target.id.split("--")[1];
+    const taskToDelete = event.target.id.split("--")[1];
+    console.log("taskToDelete")
     API.deleteTask(taskToDelete)
-    .then(() => API.getTasks())
-  }
+  
+    .then((response) => {
+      return renderTasks(response)
+  })
+}
+
 })
 
 export default eventListener

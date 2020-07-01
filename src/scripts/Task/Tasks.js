@@ -7,7 +7,7 @@ taskForm: () => {
         <div class="form-group">
         <label for="task">Task</label>
         <input type="text" class="form-control" id="taskEntry" placeholder="enter task">
-        <small id="task"
+        <small id="task">
         </div>
         <div class="form-group">
         <label for="taskDate">Completion Date</label>

@@ -3,7 +3,7 @@ const createTaskEntry = (tasks, date, userId) => {
     const newTaskEntry = {
         tasks: tasks,
         date: date,
-        userId: userId
+        userId: parseInt(userId)
     }
     return newTaskEntry
 }
