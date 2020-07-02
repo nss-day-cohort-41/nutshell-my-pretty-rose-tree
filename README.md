@@ -1,87 +1,67 @@
-# Nutshell: The Information Dashboard
+# Nutshell
+
+Your life in a nutshell! 
+
+## Team
+Brett Derrington
+Amanda King
+Faith Magras
+James Su Shum
+
+## Installation
 
 ## Setup: Follow these steps exactly
 
 1. Clone this repository
-1. `cd` into the directory it creates
-1. Make a `database.json` file in the `api` directory
-1. Delete the `.ignore` file in the `api` directory
+2. Load or create a `database.json` file in the `api` 
+3. run `json-server -p 8088 -w database.json` from `api` directory in the terminal
+4. `serve` from `src` in the terminal
 
-> **Note:** Your `database.json` file is already in the `.gitignore` file for this project, so it will never be added to the repo or pushed to Github.
 
-## Instructions
+## Summary
 
-Nutshell is a new product offering that you have been tasked with building. It's a dashboard for people to use to organize their daily tasks, events, news article, friends, and chat messages.
+Nutshell is a new product offering. It's a dashboard for people to use to organize their daily tasks, events, news article, friends, and chat messages. Full functionality exists with this version, excluding "friends" relationships.This app does not utilize real authentication. It is a simulation of it using vanilla JavaScript, Session Storage, and a local database.json file. 
 
-You will be utilizing all of the skills and concepts that you've learned up to this point in the course.
+## Skills Utilized
 
 1. Functions
-1. Databases
-1. Github
-1. Objects
-1. CSS/Flexbox
-1. Array methods
-1. Components
-1. Handling user events
-1. Implementing CRUD operations
-1. Relational data
-1. ERDs
+2. Databases/API
+3. Github
+4. Objects
+5. CSS/Flexbox
+6. Array methods
+7. Components
+8. Handling user events
+9. Implementing CRUD operations
+10. Relational data
+11. ERDs
+12. Factory Function
 
-To start you off, here's an example of what the resources in your API should look like once it's populated with some data from your application.
+## How to Login
 
-### Users
+Select "Create a new account" from homepage, and enter in a valid username, email, and password.
 
-```json
-{ "id": 1, "username": "Steve", "email": "me@me.com", "password": "xxxxxxxxxxxxxxxxxxxxx" }
-```
+OR if you have already created an account, enter a valid username and password in the login form and select "Sign In".
 
-### Messages
+## How to use Messages
 
-```json
-{ "id": 1, "userId": 1, "message": "What's up?" }
-```
+* Type a message into the message input field and click submit.
+* If you would like to edit your own message, select the "Edit" button in the message.
+* After selecting "Edit", you can go into the new message input to type in a new message. Once you are done, select submit updated edited message.
+* If you would like to delete your own message, select the "Delete" button and the messsage will be removed.
 
-### News
+## How to use Tasks
 
-```json
-{
-    "id": 1,
-    "userId": 2,
-    "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-    "title": "Wormholes Allow Information to Escape Black Holes",
-    "synopsis": "Check out this recent discovery about workholes"
-}
-```
+* To create a new task enter the name of the task in the task input field, and provide a date you would like the task to be completed by then select "Submit" to save it.
+* To delete an event, select the "Remove" button.
 
-### Friends
+## How to use Events
 
-```json
-{ "id": 1, "userId": 1, "following": 3 }
-```
+* If a user is logged in and has no events they will see a message reading "No Events".
+* To create a new event, select "Create an event" to populate the new event field.
+* Input an event name, date, and location in the input fields and select "Submit Event" to save to Upcoming Events.
+* If a user inputs new events the upcoming event will display in bold.
 
-### Tasks
+## How to Logout
 
-```json
-{ "id": 1, "userId": 3, "task": "Take out garbage", "complete": false }
-```
-
-## Professional Requirements
-
-1. Each module should have a comment at the top with the following info: author(s) and purpose of module
-1. The README for your project should include instructions on how another person can download and run the application
-
-## How to Handle Authentication
-
-Be very clear that what you will be implemeting is not real authentication. It is a simulation of it using very simplistic tools.
-
-You will be using session storage to keep track of which user has logged into Nutshell. When the user fills out the registration form, you will POST their email, username and password to the `users` collection in your API. You will then immediately take the `id` of the object in the response and save it to [session storage](https://javascript.info/localstorage#sessionstorage).
-
-```js
-sessionStorage.setItem("activeUser", user.id)
-```
-
-If you want to add a Logout feature, all you need to do it remove the session storage item.
-
-```js
-sessionStorage.removeItem("activeUser")
-```
+* Click the "Logout" button at the top of the page to logout and return to the login page.

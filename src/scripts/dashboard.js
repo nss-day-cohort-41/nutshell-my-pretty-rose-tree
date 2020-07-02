@@ -9,26 +9,28 @@ import eventsListeners from './Event/eventsListeners.js'
 import eventsAPI from './Event/eventsAPIcalls.js'
 import eventsDisplay from './Event/eventsDisplay.js'
 
-
+// calls display of messages to dom and creat message function
 messageListeners.displayListener()
 createMessageObject()
-
+// factory function to allow user to logout
  const logout = {
- 
+//  redirects user to login index html page
  redirectToLogin() {
     window.location.replace("http://localhost:5000/src/");
   },
+  // clears session storage and invokes redirect function
   logoutUser() {
     sessionStorage.removeItem('activeUser')
     this.redirectToLogin()
   },
+  // listens for event click then invokes logout function
   logoutListener() {
     document.getElementById('logoutButton').addEventListener("click", event => {
       this.logoutUser()
     })
 }
  }
-
+// invokes logout function
  logout.logoutListener()
 
 
