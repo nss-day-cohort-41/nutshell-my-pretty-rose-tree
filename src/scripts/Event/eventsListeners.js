@@ -41,6 +41,7 @@ const eventsListeners = {
           eventsDisplay.displayEventsList(response)
           document.getElementById('eventFormEntry').reset()
         })
+        .then(() => eventsDisplay.toggleStyle(eventsAPI.allActiveUserEvents))
       }
     })
   },
@@ -57,6 +58,7 @@ const eventsListeners = {
         eventsAPI.deleteEvent(eventToBeDeletedId)
         .then(() => eventsAPI.getAllActiveUserEvents(activeUserId))
         .then(response => eventsDisplay.displayEventsList(response))
+        .then(() => eventsDisplay.toggleStyle(eventsAPI.allActiveUserEvents))
       }
     })
   }

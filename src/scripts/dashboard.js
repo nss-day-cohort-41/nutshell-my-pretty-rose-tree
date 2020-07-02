@@ -38,9 +38,12 @@ eventsHTML.newEventButton();
 eventsListeners.displayFormListener();
 // Invoking method to get all events pertaining to active user and display events in DOM
 const activeUserId = sessionStorage.getItem('activeUser')
-eventsAPI.getAllActiveUserEvents(activeUserId).then(() => eventsDisplay.displayEventsList(eventsAPI.allEvents))
+eventsAPI.getAllActiveUserEvents(activeUserId).then(() => eventsDisplay.displayEventsList(eventsAPI.allActiveUserEvents))
+.then(() => eventsDisplay.toggleStyle(eventsAPI.allActiveUserEvents))
 // Invoking method to delete event when delete button is clicked
 eventsListeners.deleteSelectedEvent();
+// Invoking method to toggle CSS class to event 
+// eventsDisplay.toggleStyle(eventsAPI.allActiveUserEvents);
 
 
 // calling taskForm

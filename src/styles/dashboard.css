@@ -33,10 +33,11 @@
     background-color: cornsilk;
 }
 
-#eventContainer{
-    background-color: cornsilk;
-}
 #newsContainer{
     background-color: cornsilk;
 }
 
+/* login button */
+#logoutButton {
+    margin: 1em;
+}
