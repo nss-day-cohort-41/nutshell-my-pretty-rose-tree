@@ -13,7 +13,7 @@ const eventsAPI = {
   async getAllActiveUserEvents(activeUserId) {
     const response = await fetch(`http://localhost:8088/events?userId=${activeUserId}`)
     const data = await response.json()
-    this.allEvents = data
+    this.allActiveUserEvents = data
     return data
   },
   async deleteEvent(eventId) {

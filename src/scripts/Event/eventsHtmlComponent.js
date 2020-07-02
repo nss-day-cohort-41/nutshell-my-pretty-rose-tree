@@ -20,7 +20,7 @@ const eventsHTML = {
         <form id="eventFormEntry">
           <div class="form-group">
             <label for="newEventName">Event Name</label>
-            <input type="text" class="form-control" id="newEventName" placeholder="Enter event name">
+            <input type="text" class="form-control" id="newEventName" placeholder="enter event name">
           </div>
           <div class="form-group">
             <label for="newEventDate">Date</label>
@@ -28,7 +28,7 @@ const eventsHTML = {
           </div>
           <div class="form-group">
             <label for="newEventAddress">Event Address</label>
-            <input type="text" class="form-control" id="newEventAddress" placeholder="Ex. 1234 Main St, New York, NY 10005">
+            <input type="text" class="form-control" id="newEventAddress" placeholder="ex. 1234 Main St, New York, NY 10005">
           </div>
           <button type="submit" class="btn btn-secondary" id="submitNewEvent">Submit Event</button>
         </form>
@@ -40,7 +40,7 @@ const eventsHTML = {
   // Method converts event data to HTML representation
   eventHtmlRepresentation(eventObj) {
     const eventHtmlRep = `
-      <div class="card w-50" id="event--${eventObj.id}">
+      <div class="card w-50 eventCard" id="event--${eventObj.id}">
         <div class="card-body">
           <h5 class="card-title" id="eventName">${eventObj.name}</h5>
           <p class="card-text" id="eventDate">${eventObj.date}</p>

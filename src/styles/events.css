@@ -1,0 +1,44 @@
+#eventContainer {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.eventButton {
+  margin-left: 1em;
+}
+
+.eventForm {
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+#newEventDate {
+  width: 20%;
+}
+
+#submitNewEvent {
+  margin-top: 0.5em;
+}
+
+#eventList {
+  margin: 1em;
+  padding: 2em;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+#eventsListTitle {
+  margin-bottom: 1em;
+}
+
+.eventCard {
+  margin-bottom: 1em;
+}
+
+.highlight {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
