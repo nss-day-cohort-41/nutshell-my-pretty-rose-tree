@@ -53,7 +53,31 @@ document.querySelector(".taskLog").addEventListener("click", event => {
   })
   
 }
-
 })
+checkTask() {
+  const checkTaskButton = document.querySelector(".taskLog")
+  checkTaskButton.addEventListener("click", clickEvent => {
+    if(event.id.startsWith("checkTask")){
+      console.log("is this working ")
+      cont taskToCheck = ClickEvent.target.id.split("--")[1]
+      const checked = event.target.checked
+      if(checked === true){
+        fetch(`http://localhost:8088/tasks/${taskToCheck}`)
+        .then(response => response.json())
+        .then(task => {
+          const taskCheckedObject = {
+              "userId": task.userId,
+              "task": task.task,
+              "date": task.date,
+              "completed": ture
+
+          }
+          API.checkTask(taskToCheck, taskObj)
+          document.querySelector(".taskLog").innerHTML
+        })
+      }
+    }
+  })
+}
 
 export default eventListener
