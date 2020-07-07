@@ -18,7 +18,7 @@ const loginRegisterListeners = {
 
       // Checking if any input fields are empty, if so return error message
       if (usernameInputValue === "" || usernameEmailValue === "" || usernamePasswordValue === "") {
-        document.getElementById('errorContainer').innerHTML = "Please complete all sections"
+        document.getElementById('errorContainer').innerHTML = `<p class="fontColor">Please complete all sections</p>`
         // Checking if registerAuth is "false", meaning new user object can be created
       } else if (!this.registerAuth(usernameInputValue, usernameEmailValue)) {
         const newUserObject = createUserObject(usernameInputValue, usernameEmailValue, usernamePasswordValue)
@@ -41,7 +41,7 @@ const loginRegisterListeners = {
 
     // Checking if userFound variable is NOT undefined, return error message stating "user already exists", additionally returning "true" to stop the else-if condition in loginRegisterListeners from executing
     if (userFound !== undefined) {
-      document.getElementById('errorContainer').innerHTML = "User already exists"
+      document.getElementById('errorContainer').innerHTML = `<p class="fontColor">User already exists</p>`
       return true
       // Otherwise returning "false" and else-if condition in loginRegisterListeners can move forward
     } else {
@@ -67,7 +67,7 @@ const loginRegisterListeners = {
 
       // Checking if userFound variable is "undefined", meaning user attempting to log-in does not exist, return error message
       if (userFound === undefined) {
-        document.getElementById('errorLoginContainer').innerHTML = "The username or password is incorrect"
+        document.getElementById('errorLoginContainer').innerHTML = `<p class="fontColor">The username or password is incorrect</p>`
         return true
         // Otherwise if user exists
       } else {
@@ -87,6 +87,5 @@ const loginRegisterListeners = {
     window.location.replace("http://localhost:5000/src/dashboard");
   }
 }
-
 // Export modules
 export default loginRegisterListeners;
