@@ -64,7 +64,6 @@ API.getTasks().then((response) => {
 
 newsHTML.newNewsButton()
 newsListeners.displayFormListener()
-const activeUserId = sessionStorage.getItem('activeUser')
 newsAPI.getNews(activeUserId).then(() => newsDisplay.displayNewsList(newsAPI.userNews))
 .then(() => newsDisplay.toggleStyle(newsAPI.userNews))
 newsListeners.deleteSelectedArticle()
