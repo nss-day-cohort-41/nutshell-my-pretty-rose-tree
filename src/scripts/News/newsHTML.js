@@ -22,7 +22,7 @@ const newsHTML = {
                 </div>`
             return html
     },
-    //this is the method that will convert an item from that user's news list to its html component, and 
+    //this is the method that will convert an item from that user's news list to its html component
     newsConverter (newsItem) {
         if(newsItem.userId == window.sessionStorage.activeUser){
             const newsHTML = 
@@ -56,7 +56,6 @@ const newsHTML = {
     newNewsButton() {
         //this creates the html for the button that would render the input form when clicked
         const newsContainer = document.getElementById('newsContainer')
-
         const newsHtmlButton = `
         <div class="newsButton">
             <button type="button" class="btn btn-secondary" id="createNewsButton">Create an news article</button>
