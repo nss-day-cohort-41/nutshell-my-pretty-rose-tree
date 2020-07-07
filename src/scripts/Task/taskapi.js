@@ -32,13 +32,14 @@ deleteTask: (id) => {
     })
     .then(response => response.json())
 },
-checkTask: () => {
-    return fetch(`http://localhost:8088/tasks/${taskEntry}`, {
+// check task
+checkTask: (id, taskEntryObj) => {
+    return fetch(`http://localhost:8088/tasks/${id}`, {
         method: "PUT",
         headers: {
            "Content-Type": "application/json" 
         },
-        body: JSON.stringify(taskObj)
+        body: JSON.stringify(taskEntryObj)
     })
 }
 }

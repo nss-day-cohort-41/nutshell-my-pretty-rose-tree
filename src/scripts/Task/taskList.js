@@ -8,8 +8,12 @@ const renderTasks = (tasks) => {
     taskArticleElement.innerHTML = ""
     // this is pulling from taskToDom
     const taskArray =  API.allTasks()
-    // this is itesrating through taskArray
-    for(const taskObject of taskArray ){
+    // this is filtering through the task to see if they are complete
+    const incompleteTasks = taskArray.filter(task => {
+        return task.completed === false
+    })
+    // this is itesrating through incomplete taskArray
+    for(const taskObject of incompleteTasks ){
         const taskHTML = makeTaskComponent(taskObject)
         // this makes sure it prints to the dom
         taskArticleElement.innerHTML += taskHTML
