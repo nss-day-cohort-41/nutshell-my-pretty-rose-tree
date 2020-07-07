@@ -3,7 +3,7 @@ import newsHTML from "./newsHTML.js"
 const newsDisplay = {
     //Method displays news list container in DOM
     displayNewsList(arrayOfNews) {
-        const newListElement = document.getElementById('newsList')
+        const newListElement = document.getElementById('displayAllNews')
         newsListElement.innerHTML = ""
         newsListElement.innerHTML = `<h4 id="newsListTitle">Latest Articles</h4>`
 
@@ -16,8 +16,8 @@ const newsDisplay = {
         newListElement.innerHTML += `<h5 id="noNewsMessage">No news articles found</h5>`
         } else {
         for (const newsObj of sortedArray) {
-            const newHTML = newsHTML.newsConverter(newObj)
-            newListElement.innerHTML += newHTML
+            const newArticleHTML = newsHTML.newsConverter(newObj)
+            newListElement.innerHTML += newArticleHTML
         }
         }
     }

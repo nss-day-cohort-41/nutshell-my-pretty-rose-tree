@@ -38,7 +38,7 @@ const newsListeners = {
         })
     },
     deleteSelectedArticle() {
-        const newsListElement = document.getElementById('newsList')
+        const newsListElement = document.getElementById('displayAllNews')
         const activeUserId = sessionStorage.getItem('activeUser')
 
         newsListElement.addEventListener('click', event => {
