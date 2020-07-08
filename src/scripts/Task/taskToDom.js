@@ -1,12 +1,12 @@
 // this is printing  thing to the dom
 // there is a checkbox and and a remove button
 const makeTaskComponent = (taskList) => {
-    const taskHTMLRepresentation = `<div>
+    const taskHTMLRepresentation = `<div class="taskItem">
       Task: ${taskList.tasks}<br>
       Compeletion Date: ${taskList.date}<br>
      UserID: ${taskList.userId}
     <div>
-    <input type="checkbox"  id="checkTask">
+    <input type="checkbox"  id="checkTask--${taskList.id}">
     <label  for="checkTask">check when Complete</label>
     </div>
     <button id="deleteTask--${taskList.id}">Remove</button>

@@ -31,7 +31,18 @@ deleteTask: (id) => {
         method: "DELETE"
     })
     .then(response => response.json())
+},
+// check task
+checkTask: (id, taskEntryObj) => {
+    return fetch(`http://localhost:8088/tasks/${id}`, {
+        method: "PUT",
+        headers: {
+           "Content-Type": "application/json" 
+        },
+        body: JSON.stringify(taskEntryObj)
+    })
 }
 }
+
 
 export default API

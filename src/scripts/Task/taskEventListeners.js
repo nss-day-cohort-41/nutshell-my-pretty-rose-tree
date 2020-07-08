@@ -53,7 +53,39 @@ document.querySelector(".taskLog").addEventListener("click", event => {
   })
   
 }
-
 })
+//  check button
+  const checkTaskButton = document.querySelector(".taskLog")
+  // this is targeting the contianer that has the check button
+  checkTaskButton.addEventListener("click", clickEvent => {
+    // if id starts with checkTask 
+    if(event.target.id.startsWith("checkTask--")){
+    // then turn that check task into an array. index one is the id 
+      const taskToCheck = clickEvent.target.id.split("--")[1]
+      // if the checkbox is check then fetch the task based on id
+      const checked = event.target.checked
+      if(checked === true){
+        fetch(`http://localhost:8088/tasks/${taskToCheck}`)
+        // this is getting the task and the .then is returning task as as updated object and as complete
+        .then(response => response.json())
+        .then(task => {
+          const taskCheckedObject = {
+              "task": task.tasks,
+              "date": task.date,
+              "userId": task.userId,
+              "completed": true
+
+          }
+          // calling the edit/PUT function in api and passing in the taskToCheck which = id
+          // taskCheckedObj is updating the existing task in the database
+          API.checkTask(taskToCheck, taskCheckedObject)
+          // this clearing it from the dom
+          document.querySelector(".taskItem").innerHTML = ""
+
+        })
+      }
+    }
+  })
+
 
 export default eventListener
